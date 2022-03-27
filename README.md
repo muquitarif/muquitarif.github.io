@@ -1,3 +1,2 @@
 # muquitarif.github.io
-Hi, My name is Muquit Arif
-This is my first webpage using html and css
+Hi, My name is Muquit Arif, this is my first webpage using html and css
