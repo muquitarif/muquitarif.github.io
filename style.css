@@ -1,6 +1,7 @@
 body
 {
    font-family: 'Century Gothic';
+   background-color: dodgerblue;
 }
 
 .navbar
@@ -26,16 +27,7 @@ body
 
 .welcome
 {
- background-color: dodgerblue;
  color: white;
- padding: 10ex;
- text-align: center;
-}
-
-.intro
-{
- background-color: white;
- color: dodgerblue;
  padding: 10ex;
  text-align: center;
 }
