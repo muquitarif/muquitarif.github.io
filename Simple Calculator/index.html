@@ -1,61 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <title>Simple Calculator</title>
 </head>
 
 <body>
 
-    <h1>Calculator</h1>
+    <h2 class="heading">Simple Calculator</h2>
     <p> </p>
 
     <table class="center">
 
-         <tr>
-             <td><input type="button" value="1"></td>
-             <td><input type="button" value="2"></td>
-             <td><input type="button" value="3"></td>
-             <td><input type="button" value="+"></td>
-         </tr>
-         
-         <tr>
-            <td><input type="button" value="4"></td>
-            <td><input type="button" value="5"></td>
-            <td><input type="button" value="6"></td>
-            <td><input type="button" value="-"></td>
-         </tr>
+        <input type="text" class="output" id="output">
+        <p> </p>
+        <tbody>
+            <tr>
+                <input type="button" class="clear" id="clear" value="Clear display" onclick="">
+                <td><input class="button" type="button" value="1" onclick=""></td>
+                <td><input class="button" type="button" value="2" onclick=""></td>
+                <td><input class="button" type="button" value="3" onclick=""></td>
+                <td><input class="button" type="button" value="+" onclick=""></td>
+            </tr>
 
-         <tr>
-            <td><input type="button" value="7"></td>
-            <td><input type="button" value="8"></td>
-            <td><input type="button" value="9"></td>
-            <td><input type="button" value="*"></td>
-         </tr>
-    
-         <tr>
-            <td><input type="button" value="/"></td>
-            <td><input type="button" value="."></td>
-            <td><input type="button" value="%"></td>
-            <td><input type="button" value="="></td>
-         </tr>
+            <tr>
+                <td><input class="button" type="button" value="4" onclick=""></td>
+                <td><input class="button" type="button" value="5" onclick=""></td>
+                <td><input class="button" type="button" value="6" onclick=""></td>
+                <td><input class="button" type="button" value="-" onclick=""></td>
+            </tr>
 
-        
-         
-     </td>
+            <tr>
+                <td><input class="button" type="button" value="7" onclick=""></td>
+                <td><input class="button" type="button" value="8" onclick=""></td>
+                <td><input class="button" type="button" value="9" onclick=""></td>
+                <td><input class="button" type="button" value="*" onclick=""></td>
+            </tr>
+
+            <tr>
+                <td><input class="button" type="button" value="0" onclick=""></td>
+                <td><input class="button" type="button" value="/" onclick=""></td>
+                <td><input class="button" type="button" value="." onclick=""></td>
+                <td><input class="button" type="button" value="=" onclick=""></td>
+            </tr>
+        </tbody>
 
     </table>
 
-    <footer> <p> Developed by Muquit Arif</p> </footer>
-    
+    <footer>
+        <p> Developed by Muquit Arif</p>
+    </footer>
 
     <script src="script.js"></script>
     <noscript>This browser does not support javascript.</noscript>
 </body>
+
 </html>
