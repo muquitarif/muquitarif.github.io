@@ -8,7 +8,7 @@
     "thumbnail": "https://i.ibb.co/nMV0hYQY/rgbled.png",
     "technologies": ["ESP32-C3", "Bluetooth", "WiFi", "Battery Charging", "PCB Design"],
     "github": "#",
-    "gallery": ["https://i.ibb.co/nMV0hYQY/rgbled.png", "https://i.ibb.co/4gFHJDPF/rgbled-pcb.png"]
+    "gallery": ["https://i.ibb.co/twk7Ttkx/rgbled-w.jpg", "https://i.ibb.co/4gFHJDPF/rgbled-pcb.png"]
   },
   {
     "id": "water-control-pcb",
@@ -87,4 +87,5 @@
     "github": "#",
     "gallery": ["https://i.ibb.co/S49sfqhp/usb-uart-convertor2.jpg"]
   }
+
 ]
