@@ -16,10 +16,10 @@
     "category": "Embedded Systems",
     "shortDesc": "Automated aquarium pump and water management controller.",
     "fullDescription": "Custom PCB for a smart aquarium water management system featuring ESP32, L298N motor control, power regulation, status LEDs, buzzer alerts, and user buttons for pump and connectivity control.",
-    "thumbnail": "https://i.ibb.co/J9M86cH/pcb-design-1.png",
+    "thumbnail": "https://i.ibb.co/4nZK3Sng/Aquarium-Water-Control-PCB.jpg",
     "technologies": ["ESP32", "Motor Control", "L298N", "Power Regulation", "IoT"],
     "github": "#",
-    "gallery": ["https://i.ibb.co/qFFnjFz5/pcb-design.png", "https://i.ibb.co/J9M86cH/pcb-design-1.png"]
+    "gallery": ["https://i.ibb.co/4nZK3Sng/Aquarium-Water-Control-PCB.jpg", "https://i.ibb.co/J9M86cH/pcb-design-1.png"]
   },
   {
     "id": "bluetooth-multiswitch",
@@ -89,4 +89,5 @@
   }
 
 ]
+
 
