@@ -1,0 +1,205 @@
+        :root {
+            --accent: #00ff9c;
+            --bg: #050505;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: #e6edf3;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-header {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .font-mono {
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        /* Animated Grid Background */
+        .grid-bg {
+            background-image: linear-gradient(to right, #1f2933 1px, transparent 1px),
+                linear-gradient(to bottom, #1f2933 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: radial-gradient(ellipse at center, black, transparent 80%);
+        }
+
+        .neon-border {
+            border: 1px solid #1f2933;
+            transition: all 0.3s ease;
+        }
+
+        .neon-border:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 15px rgba(0, 255, 156, 0.2);
+        }
+
+        .glitch-text:hover {
+            text-shadow: 2px 0 var(--accent), -2px 0 #ff00ea;
+        }
+
+        /* Default (Dark Theme) Icon Colors */
+i[data-lucide], .lucide {
+    stroke: #ffffff; /* Sets icon lines to pure white */
+    stroke-width: 2px;
+    transition: stroke 0.3s ease;
+}
+
+/* Card hover elevation */
+.group:hover {
+    box-shadow: 0 10px 30px -15px rgba(0, 255, 156, 0.2);
+}
+
+/* Ensure the external link icon is white as requested */
+[data-lucide="external-link"] {
+    stroke: #ffffff;
+}
+
+.group:hover [data-lucide="external-link"] {
+    stroke: #00ff9c;
+}
+
+/* Line clamping for consistent card heights */
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+#signal-canvas {
+    /* Lowered from 0.4 to 0.15 */
+    opacity: 0.10; 
+    mask-image: radial-gradient(circle at center, black 20%, transparent 80%);
+    -webkit-mask-image: radial-gradient(circle at center, black 20%, transparent 80%);
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+}
+
+/* Add a subtle glow to your name to make it pop over the moving tracks */
+.font-header span {
+    text-shadow: 0 0 15px rgba(0, 255, 156, 0.4);
+}
+
+.pcb-3d-wrapper {
+    perspective: 1000px;
+    /* Use max-width so it shrinks on mobile but stays 380px on desktop */
+    width: 100%;
+    max-width: 380px; 
+    /* This ensures height always matches width for a perfect circle */
+    aspect-ratio: 1 / 1; 
+    margin: 0 auto; /* Centers it in the column */
+}
+
+.pcb-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: floatingTilt 6s ease-in-out infinite;
+}
+
+.pcb-side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(0, 255, 156, 0.05) 0%, transparent 70%);
+    /* Ensure the border/outline is also applied here if you want it visible */
+    border: 1px solid rgba(0, 255, 156, 0.2);
+}
+
+.pcb-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 15px rgba(0, 255, 156, 0.3));
+}
+
+/* Floating Tilt Animation */
+@keyframes floatingTilt {
+    0% {
+        transform: rotateX(10deg) rotateY(-10deg) translateY(0px);
+    }
+    25% {
+        transform: rotateX(-5deg) rotateY(15deg) translateY(-10px);
+    }
+    50% {
+        transform: rotateX(-15deg) rotateY(-5deg) translateY(0px);
+    }
+    75% {
+        transform: rotateX(5deg) rotateY(10deg) translateY(10px);
+    }
+    100% {
+        transform: rotateX(10deg) rotateY(-10deg) translateY(0px);
+    }
+}
+
+/* Ensure sticker background stays transparent on hover */
+#stickers .sticker-wrapper:hover {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.sticker-wrapper:hover .sticker-img {
+    filter: drop-shadow(0 0 10px rgba(0, 255, 156, 0.5));
+}
+
+/* Optional: If you want to keep the "lift" effect without the background color */
+#stickers .sticker-wrapper {
+    background: transparent;
+    border: none;
+}
+
+/* Position the pagination dots */
+.project-swiper {
+    padding-bottom: 40px !important; /* Space for the dots */
+}
+
+/* Custom Pagination Dot Colors */
+.swiper-pagination-bullet {
+    background: #1f2933 !important; /* Dark/Muted base */
+    opacity: 1 !important;
+    width: 8px;
+    height: 8px;
+    transition: all 0.3s ease;
+}
+
+/* The Active "Powered On" Dot */
+.swiper-pagination-bullet-active {
+    background: #00ff9c !important; /* Theme Green */
+    box-shadow: 0 0 10px rgba(0, 255, 156, 0.6);
+    width: 24px; /* Makes the active dot a "pill" shape */
+    border-radius: 4px;
+}
+
+/* Smooth transition for the main image swap */
+/* Prevent layout shift when swapping images */
+#project-image {
+    min-height: 300px;
+    object-fit: contain;
+}
+
+/* Make the gallery scrollable on mobile if there are too many images */
+#project-gallery {
+    max-height: 300px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #1f2933 transparent;
+}
+
+/* Custom Scrollbar for Chrome/Safari */
+#project-gallery::-webkit-scrollbar {
+    width: 4px;
+}
+#project-gallery::-webkit-scrollbar-thumb {
+    background: #1f2933;
+}

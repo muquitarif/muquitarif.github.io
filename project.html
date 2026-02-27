@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | HEX_DESIGNER</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=JetBrains+Mono&display=swap');
+        :root { --accent: #00ff9c; }
+        body { background: #050505; color: white; font-family: 'Inter', sans-serif; }
+        .font-mono { font-family: 'JetBrains+Mono', monospace; }
+        .font-header { font-family: 'Inter', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: -0.05em; }
+    </style>
+</head>
+<body class="pt-20">
+
+    <nav class="fixed top-0 w-full z-50 bg-[#050505]/90 backdrop-blur-xl border-b border-[#1f2933]">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 font-mono text-xs text-[#9da7b3] hover:text-[#00ff9c] transition">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> BACK_TO_SYSTEM
+            </a>
+            <div id="nav-id" class="font-mono text-[10px] text-[#555]">PROJECT_ID: NULL</div>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-6 py-12">
+        <div id="project-content" class="opacity-0 transition-opacity duration-500">
+            <header class="mb-12">
+                <div id="project-category" class="text-[#00ff9c] font-mono text-xs tracking-widest mb-4">CATEGORY_LOADING</div>
+                <h1 id="project-title" class="font-header text-5xl md:text-6xl mb-6">PROJECT_TITLE</h1>
+                <div id="project-tech" class="flex gap-3 flex-wrap"></div>
+            </header>
+
+      <div class="mb-16 border border-[#1f2933] bg-[#0d1117] p-2">
+    <div class="relative overflow-hidden bg-black/20 flex-1 border border-[#1f2933]/30 flex items-center justify-center p-4">
+    <img id="project-image" 
+         src="" 
+         alt="" 
+         class="max-h-[450px] md:max-h-[400px]w-auto h-auto object-contain transition-all duration-700 block mx-auto">         
+</div>
+
+ <div id="project-gallery" class="mt-5 pt-5  grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3"></div>
+</div>
+    
+        </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="md:col-span-2 space-y-8 text-[#9da7b3] leading-relaxed text-lg">
+                    <h3 class="font-mono text-white text-sm border-b border-[#1f2933] pb-2 uppercase tracking-tighter">Technical_Overview</h3>
+                    <div id="project-longDesc" class="space-y-4"></div>
+                </div>
+
+
+                <div class="space-y-8">
+                    <div class="bg-[#0d1117] border border-[#1f2933] p-6 space-y-6">
+                        <div>
+                            <span class="block font-mono text-[10px] text-[#555] uppercase mb-2">Role</span>
+                            <p id="project-role" class="text-sm text-white">Hardware Engineer</p>
+                        </div>
+                        <div>
+                            <span class="block font-mono text-[10px] text-[#555] uppercase mb-2">Software Used</span>
+                            <p id="project-date" class="text-sm text-white">Alium</p>
+                        </div>
+                        <a id="project-link" href="#" target="_blank" rel="noopener noreferrer" class="block w-full py-3 bg-[#00ff9c] text-black text-center font-bold text-xs uppercase hover:shadow-[0_0_15px_rgba(0,255,156,0.4)] transition-all">
+                            View Source_Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+
+    <script src="js/details.js"></script>
+</body>
+</html>

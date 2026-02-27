@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware Engineer | Portfolio</title>
+      <meta name="description" content="Hi there, I'm Muquit, A Hardware Design Engineer">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://muquitarif.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Muquit Arif - Portfolio">
+    <meta property="og:description" content="Hi there, I'm Muquit, A Hardware Design Engineer">
+    <meta property="og:image" content="https://i.ibb.co/YTWDGCqt/muquit-social-share.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="muquitarif.github.io">
+    <meta property="twitter:url" content="https://muquitarif.github.io/">
+    <meta name="twitter:title" content="Muquit Arif - Portfolio">
+    <meta name="twitter:description" content="Hi there, I'm Muquit, A Hardware Design Engineer">
+    <meta name="twitter:image" content="https://i.ibb.co/YTWDGCqt/muquit-social-share.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&family=Roboto+Mono&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" >>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body class="overflow-x-hidden">
+
+    <div class="fixed inset-0 grid-bg opacity-20 -z-10"></div>
+
+    <nav class="fixed top-0 w-full z-50 bg-[#050505]/90 backdrop-blur-xl border-b border-[#1f2933]">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-header text-xl tracking-tighter text-[#00ff9c] flex items-center gap-2">
+                <i data-lucide="cpu" class="w-5 h-5"></i> ENGINEER
+            </div>
+
+            <div class="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-widest">
+                <a href="#about" class="hover:text-[#00ff9c] transition">01. About</a>
+                <a href="#skills" class="hover:text-[#00ff9c] transition">02. Stack</a>
+                <a href="#projects" class="hover:text-[#00ff9c] transition">03. Projects</a>
+                <a href="#contact" class="hover:text-[#00ff9c] transition">04. Contact</a>
+                <a href="#learn-pcb" class="hover:text-[#00ff9c] transition">05. Learn PCB Design</a>
+                <a href="#stickers" class="hover:text-[#00ff9c] transition">06. Get Stickers</a>
+                <div class="flex items-center gap-4 border-l border-[#1f2933] pl-8">
+                    <a href="https://github.com/muquitarif/" class="hover:text-white transition"><i data-lucide="github" class="w-4 h-4"></i></a>
+                    <a href="https://www.linkedin.com/in/muquit-arif/" class="hover:text-white transition"><i
+                            data-lucide="linkedin" class="w-4 h-4"></i></a>
+                   <!--  <button id="theme-toggle"
+                        class="relative inline-flex h-5 w-10 items-center rounded-full bg-[#1f2933] border border-[#00ff9c]/30">
+                        <span id="toggle-circle"
+                            class="inline-block h-3 w-3 transform rounded-full bg-[#00ff9c] transition-transform translate-x-1">
+                            <i data-lucide="moon" class="w-2 h-2 text-black absolute inset-0 m-auto"></i>
+                        </span>
+                    </button> -->
+                </div>
+            </div>
+
+            <div class="flex md:hidden items-center gap-4">
+              <!--   <button id="theme-toggle-mobile"
+                    class="p-2 border border-[#1f2933] text-white hover:border-[#00ff9c] transition-colors">
+                    <i data-lucide="sun" class="w-5 h-5"></i>
+                </button> -->
+                <button id="menu-open" class="text-white hover:text-[#00ff9c] transition">
+                    <i data-lucide="menu" class="w-8 h-8"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="menu-overlay"
+        class="fixed inset-0 bg-black/60 z-[55] hidden backdrop-blur-sm transition-opacity duration-300 opacity-0">
+    </div>
+
+    <div id="mobile-menu"
+        class="fixed inset-y-0 right-0 z-[60] w-full sm:w-80 bg-[#0d1117] border-l border-[#00ff9c]/20 translate-x-full transition-transform duration-500 ease-in-out md:hidden shadow-2xl">
+        <div class="flex flex-col h-full p-8 relative">
+            <div
+                class="absolute inset-0 pointer-events-none opacity-10 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_4px,4px_100%]">
+            </div>
+
+            <div class="flex justify-between items-center mb-16 relative z-10">
+                <span class="font-mono text-[10px] text-[#00ff9c] tracking-tighter">NAV_SYSTEM_v2.6</span>
+                <button id="menu-close"
+                    class="text-white hover:text-[#00ff9c] transition-colors p-2 border border-[#1f2933]">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <nav class="flex flex-col gap-6 font-header text-2xl uppercase tracking-tighter relative z-10">
+                <a href="#about"
+                    class="mobile-link group flex items-center justify-between hover:text-[#00ff9c] transition-all">
+                    <span>01. About</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all"></i>
+                </a>
+                <a href="#skills"
+                    class="mobile-link group flex items-center justify-between hover:text-[#00ff9c] transition-all">
+                    <span>02. Stack</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all"></i>
+                </a>
+                <a href="#projects"
+                    class="mobile-link group flex items-center justify-between hover:text-[#00ff9c] transition-all">
+                    <span>03. Projects</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all"></i>
+                </a>
+
+                <a href="#contact-cta" class="mobile-link group flex items-center justify-between hover:text-[#00ff9c] transition-all">
+                    <span>04. Contact</span>
+                    <i data-lucide="terminal" class="w-4 h-4"></i>
+                </a>
+
+                <a href="#learn-pcb" class="mobile-link group flex items-center justify-between hover:text-[#00ff9c] transition-all">
+                    <span>05. Learn PCB Design</span>
+                    <i data-lucide="terminal" class="w-4 h-4"></i>
+                </a>
+
+                <a href="#stickers" class="mobile-link group flex items-center justify-between hover:text-[#00ff9c] transition-all">
+                    <span>06. Get Stickers</span>
+                    <i data-lucide="terminal" class="w-4 h-4"></i>
+                </a>
+            </nav>
+
+            <div class="mt-auto border-t border-[#1f2933] pt-8 relative z-10">
+                <div class="font-mono text-[10px] text-[#9da7b3] mb-4">
+                    <p>> STATUS: <span class="text-[#00ff9c]">ENCRYPTED_SESSION</span></p>
+                    <p>> CORE: <span class="text-white">HARDWARE_V1</span></p>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" class="p-2 bg-[#1f2933] text-white hover:bg-[#00ff9c] hover:text-black transition-all">
+                        <i data-lucide="github" class="w-4 h-4"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/muquit-arif/" target="_blank"
+                        class="p-2 bg-[#1f2933] text-white hover:bg-[#00ff9c] hover:text-black transition-all">
+                        <i data-lucide="linkedin" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="min-h-screen flex items-center justify-center pt-20 px-3">
+
+        <canvas id="signal-canvas" class="absolute inset-0 z-0 opacity-40"></canvas>
+
+        <div class="relative z-10 text-center">
+            <p class="font-mono text-[#00ff9c] mb-4 text-sm tracking-[0.3em] uppercase">System.Initialize()</p>
+            <h1 class="font-header text-5xl md:text-7xl mb-6 font-bold tracking-tight">
+                Engr. <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-[#00ff9c] to-[#00b3ff]">Muquit</span>
+            </h1>
+            <h2 class="text-xl md:text-2xl font-mono mb-8 text-[#9da7b3]">
+                > <span id="typing-text"></span><span class="animate-pulse">_</span>
+            </h2>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="https://www.linkedin.com/in/muquit-arif/"
+                    class="bg-[#00ff9c] text-black px-8 py-3 font-bold uppercase text-sm hover:scale-105 transition duration-300">View
+                    Linkedin</a>
+                <a href="#contact"
+                    class="border border-[#1f2933] px-8 py-3 font-bold uppercase text-sm hover:bg-white/5 transition">Contact</a>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <section id="about" class="max-w-7xl mx-auto px-6 py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        
+        <div class="lg:col-span-7">
+            <p class="font-mono text-[#00ff9c] text-xs tracking-[0.5em] mb-4 uppercase">01. PROFILE_OVERVIEW</p>
+            <h3 class="font-header text-4xl mb-6 font-bold leading-tight">Engineering <span class="text-[#00ff9c]">Intelligent Hardware</span> for a <span class="text-[#00ff9c]">Smarter World</span>.</h3>
+
+            <div class="space-y-6 text-[#9da7b3] leading-relaxed">
+                <p>
+                    I am a <strong class="text-white">Hardware Design Engineer</strong> with a passion for turning complex problems into elegant, manufacturable PCB assemblies. My work focuses on the intersection of high-speed digital design and low-power embedded systems.
+                </p>
+                <p>
+                    I specialize in creating high-performance PCB assemblies with a focus on signal integrity and power distribution. My passion for problem-solving drives me to continuously learn and adapt to new challenges in the hardware space. I am committed to leveraging my technical expertise to build innovative solutions that have a meaningful, positive impact on people's lives worldwide.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="lg:col-span-5 relative flex justify-center items-center py-12">
+    <div class="absolute w-72 h-72 bg-[#00ff9c]/5 rounded-full blur-[100px] animate-pulse"></div>
+    
+    <div class="pcb-3d-wrapper">
+        <div class="pcb-card">
+            <div class="pcb-side pcb-front border border-[#00ff9c]/20">
+                <img src="https://i.ibb.co/xq4N3VZW/pcb.png" alt="Logo Front">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+</section>
+
+<section id="process" class="max-w-7xl mx-auto px-6 py-1">
+    <div class="mb-16">
+        <p class="font-mono text-[#00ff9c] text-xs tracking-[0.5em] mb-4 uppercase">02. WORKFLOW_ENGINEERING</p>
+        <h2 class="font-header text-4xl md:text-4xl font-bold text-white text-left">My Design Process</h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="p-6 bg-[#0d1117] border border-[#1f2933] hover:border-[#00ff9c]/50 transition-all group relative">
+            <span class="font-mono text-[#00ff9c] text-[13px] block mb-2">STEP_01</span>
+            <h4 class="text-white font-header uppercase tracking-wider text-sm mb-2">Get Requirements</h4>
+            <p class="text-[14px] text-[#9da7b3] leading-relaxed">Defining project scope, functional specs, and constraints.</p>
+        </div>
+
+        <div class="p-6 bg-[#0d1117] border border-[#1f2933] hover:border-[#00ff9c]/50 transition-all group relative">
+            <span class="font-mono text-[#00ff9c] text-[13px] block mb-2">STEP_02</span>
+            <h4 class="text-white font-header uppercase tracking-wider text-sm mb-2">Components Research</h4>
+            <p class="text-[14px] text-[#9da7b3] leading-relaxed">Selecting parts based on availability, cost, and performance.</p>
+        </div>
+
+        <div class="p-6 bg-[#0d1117] border border-[#1f2933] hover:border-[#00ff9c]/50 transition-all group relative">
+            <span class="font-mono text-[#00ff9c] text-[13px] block mb-2">STEP_03</span>
+            <h4 class="text-white font-header uppercase tracking-wider text-sm mb-2">Schematics Design</h4>
+            <p class="text-[14px] text-[#9da7b3] leading-relaxed">Capturing the logical architecture and circuit connectivity.</p>
+        </div>
+
+        <div class="p-6 bg-[#0d1117] border border-[#1f2933] hover:border-[#00ff9c]/50 transition-all group relative">
+            <span class="font-mono text-[#00ff9c] text-[13px] block mb-2">STEP_04</span>
+            <h4 class="text-white font-header uppercase tracking-wider text-sm mb-2">Placement on PCB</h4>
+            <p class="text-[14px] text-[#9da7b3] leading-relaxed">Physical layout of components for optimal signal flow.</p>
+        </div>
+
+        <div class="p-6 bg-[#0d1117] border border-[#1f2933] hover:border-[#00ff9c]/50 transition-all group relative">
+            <span class="font-mono text-[#00ff9c] text-[13px] block mb-2">STEP_05</span>
+            <h4 class="text-white font-header uppercase tracking-wider text-sm mb-2">Set Design Rules</h4>
+            <p class="text-[14px] text-[#9da7b3] leading-relaxed">Aligning design constraints with manufacturer capabilities.</p>
+        </div>
+
+        <div class="p-6 bg-[#0d1117] border border-[#1f2933] hover:border-[#00ff9c]/50 transition-all group relative">
+            <span class="font-mono text-[#00ff9c] text-[13px] block mb-2">STEP_06</span>
+            <h4 class="text-white font-header uppercase tracking-wider text-sm mb-2">PCB Routing</h4>
+            <p class="text-[14px] text-[#9da7b3] leading-relaxed">Interconnecting nets with focus on EMI and signal integrity.</p>
+        </div>
+
+        <div class="p-6 bg-[#0d1117] border border-[#1f2933] hover:border-[#00ff9c]/50 transition-all group relative">
+            <span class="font-mono text-[#00ff9c] text-[13px] block mb-2">STEP_07</span>
+            <h4 class="text-white font-header uppercase tracking-wider text-sm mb-2">Design Rule Check</h4>
+            <p class="text-[14px] text-[#9da7b3] leading-relaxed">Automated verification (DRC) to ensure zero design errors.</p>
+        </div>
+
+        <div class="p-6 bg-[#0d1117] border border-[#1f2933] hover:border-[#00ff9c]/50 transition-all group relative">
+            <span class="font-mono text-[#00ff9c] text-[13px] block mb-2">STEP_08</span>
+            <h4 class="text-white font-header uppercase tracking-wider text-sm mb-2">Export Production Files</h4>
+            <p class="text-[14px] text-[#9da7b3] leading-relaxed">Generating Gerber, BOM, and Pick & Place packages.</p>
+        </div>
+
+        <div class="p-6 bg-[#00ff9c]/5 border border-[#00ff9c]/30 hover:border-[#00ff9c] transition-all group relative">
+            <span class="font-mono text-[#00ff9c] text-[13px] block mb-2">STEP_09</span>
+            <h4 class="text-white font-header uppercase tracking-wider text-sm mb-2">Place Order</h4>
+            <p class="text-[14px] text-[#9da7b3] leading-relaxed">Final procurement and fabrication hand-off.</p>
+        </div>
+    </div>
+</section>
+
+
+<section id="projects" class="max-w-7xl mx-auto px-6 py-24">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">
+        <div>
+            <p class="font-mono text-[#00ff9c] text-xs tracking-[0.5em] mb-2 uppercase">02. Projects</p>
+            <h3 class="font-header text-4xl md:text-4xl font-bold text-white">Featured Projects</h3>
+        </div>
+
+        <div class="flex items-center gap-4 flex-wrap">
+            
+            <!-- <div id="filters" class="flex gap-2 flex-wrap font-mono text-[10px]">
+                <button data-filter="all" class="filter-btn active px-4 py-1 text-xs border border-[#00ff9c] bg-[#00ff9c] text-black cursor-pointer">ALL</button>
+                <button data-filter="IoT" class="filter-btn px-4 py-1 border text-xs border-[#1f2933] hover:border-[#00ff9c] text-[#9da7b3] hover:text-[#00ff9c] cursor-pointer">IOT</button>
+                <button data-filter="Power" class="filter-btn px-4 py-1 border text-xs border-[#1f2933] hover:border-[#00ff9c] text-[#9da7b3] hover:text-[#00ff9c] cursor-pointer">POWER</button>
+                <button data-filter="Embedded" class="filter-btn px-4 py-1 border text-xs border-[#1f2933] hover:border-[#00ff9c] text-[#9da7b3] hover:text-[#00ff9c] cursor-pointer">EMBEDDED</button>
+            </div> -->
+
+            <div class="hidden md:flex items-center gap-4">
+                <!-- <div class="w-[1px] h-6 bg-[#1f2933]"></div> -->
+
+                <div class="flex gap-1">
+                    <button class="swiper-prev p-1.5 border border-[#1f2933] text-[#9da7b3] hover:text-[#00ff9c] hover:border-[#00ff9c] transition-all bg-[#0d1117] cursor-pointer">
+                        <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                    </button>
+                    <button class="swiper-next p-1.5 border border-[#1f2933] text-[#9da7b3] hover:text-[#00ff9c] hover:border-[#00ff9c] transition-all bg-[#0d1117] cursor-pointer">
+                        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="projects-slider-container relative">
+        <div class="swiper project-swiper">
+            <div class="swiper-wrapper" id="project-grid">
+                </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+    <section id="skills" class="max-w-7xl mx-auto px-6 py-24 border-t border-[#1f2933]/50">
+        <div class="mb-16">
+            <p class="font-mono text-[#00ff9c] text-xs tracking-[0.5em] mb-2">04. TECHNICAL_STACK</p>
+            <h3 class="font-header text-4xl md:text-4xl font-bold text-white">Hardware & Lab Gear</h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div
+                class="p-6 bg-[#0d1117] border border-[#1f2933] hover:border-[#00ff9c]/50 transition-all group relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-2 opacity-10 group-hover:opacity-100 transition-opacity">
+                    <i data-lucide="layers" class="w-8 h-8 text-[#00ff9c]"></i>
+                </div>
+                <h4 class="font-header text-[#00ff9c] text-[16px] mb-4 tracking-tighter">CAD_SOFTWARE</h4>
+                <ul class="font-mono text-[14px] space-y-3 text-[#9da7b3]">
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#00ff9c]"></span> Altium Designer
+                    </li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#00ff9c]"></span> KiCad
+                    </li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#00ff9c]"></span> EasyEDA </li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#00ff9c]"></span> Proteus
+                    </li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#00ff9c]"></span> FreeCAD (ECAD)
+                    </li>
+                </ul>
+            </div>
+
+            <div
+                class="p-6 bg-[#0d1117] border border-[#1f2933] hover:border-[#00ff9c]/50 transition-all group relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-2 opacity-10 group-hover:opacity-100 transition-opacity">
+                    <i data-lucide="factory" class="w-8 h-8 text-[#00ff9c]"></i>
+                </div>
+                <h4 class="font-header text-[#00ff9c] text-[16px] mb-4 tracking-tighter">PROTOTYPING</h4>
+                <ul class="font-mono text-[14px] space-y-3 text-[#9da7b3]">
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#00ff9c]"></span> JLCPCB / PCBWay
+                        Workflow</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#00ff9c]"></span> DFM / DFA
+                        Analysis</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#00ff9c]"></span> BOM Optimization
+                    </li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#00ff9c]"></span> Stencil & SMT
+                        Assembly</li>
+                </ul>
+            </div>
+
+            <div
+                class="p-6 bg-[#0d1117] border border-[#1f2933] hover:border-[#00ff9c]/50 transition-all group relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-2 opacity-10 group-hover:opacity-100 transition-opacity">
+                    <i data-lucide="activity" class="w-8 h-8 text-[#00ff9c]"></i>
+                </div>
+                <h4 class="font-header text-[#00ff9c] text-[16px] mb-4 tracking-tighter">LAB_HARDWARE</h4>
+                <ul class="font-mono text-[14px] space-y-3 text-[#9da7b3]">
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#00ff9c]"></span> Digital
+                        Oscilloscope</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#00ff9c]"></span> Logic Analyzers
+                        (Saleae)</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#00ff9c]"></span>
+                        Multimeters</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#00ff9c]"></span> Soldering</li>
+                </ul>
+            </div>
+
+         <!--    <div
+                class="p-6 bg-[#0d1117] border border-[#1f2933] hover:border-[#00ff9c]/50 transition-all group relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-2 opacity-10 group-hover:opacity-100 transition-opacity">
+                    <i data-lucide="microchip" class="w-8 h-8 text-[#00ff9c]"></i>
+                </div>
+                <h4 class="font-header text-[#00ff9c] text-[16px] mb-4 tracking-tighter">EMBEDDED_DEV</h4>
+                <ul class="font-mono text-[14px] space-y-3 text-[#9da7b3]">
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#00ff9c]"></span> STM32 Cube / HAL
+                    </li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#00ff9c]"></span> ESP-IDF & Arduino
+                    </li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#00ff9c]"></span> UART / SPI / I2C
+                        / CAN</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#00ff9c]"></span> RTOS
+                        Implementation</li>
+                </ul>
+            </div> -->
+
+        </div>
+    </section>
+
+
+    <section id="contact" class="max-w-7xl mx-auto px-4 py-24">
+        <div class="relative group p-1">
+            <div
+                class="absolute -inset-0.5 bg-gradient-to-r from-[#00ff9c] to-blue-600 rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-1000">
+            </div>
+
+            <div class="relative bg-[#0d1117] border border-[#1f2933] rounded-lg p-12 text-center overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
+                    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 20 H100 V100 M200 0 V50 H250" stroke="#00ff9c" stroke-width="2" fill="none" />
+                    </svg>
+                </div>
+
+                <div class="relative z-10">
+                    <i data-lucide="terminal" class="w-12 h-12 text-[#00ff9c] mx-auto mb-6"></i>
+                    <h2 class="font-header text-4xl md:text-5xl mb-6 tracking-tight">READY TO <span
+                            class="text-[#00ff9c]">BOOT</span> YOUR NEXT PROJECT?</h2>
+                    <p class="max-w-2xl mx-auto text-[#9da7b3] text-lg mb-10 font-mono">
+                        Currently accepting new hardware design challenges
+                    </p>
+
+<div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+    <a href="mailto:muquitarif2@gmail.com"
+        class="flex items-center gap-3 bg-[#00ff9c] text-black px-10 py-4 font-bold uppercase text-sm rounded-sm hover:shadow-[0_0_20px_rgba(0,255,156,0.6)] transition-all duration-300">
+       Contact
+    </a>
+</div>
+                    <div
+                        class="mt-12 flex justify-center gap-8 text-[#9da7b3] font-mono text-[10px] uppercase tracking-[0.3em]">
+                        <span class="flex items-center gap-2"><span
+                                class="w-2 h-2 bg-[#00ff9c] rounded-full animate-ping"></span> Available</span>
+                        <span>Secure Link: AES-256</span>
+                        <span>Uptime: 99.9%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section id="learn-pcb" class="max-w-7xl mx-auto px-6 py-24 border-t border-[#1f2933]">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6 text-left">
+    <div class="max-w-xl">
+        <p class="font-mono text-[#00ff9c] text-xs tracking-[0.5em] mb-4 uppercase">05. LEARNING_PATH</p>
+        <h2 class="font-header text-4xl font-bold text-white">Learn PCB Design</h2>
+    </div>
+    
+    <a href="https://docs.google.com/document/d/1RZ2lFKEpPgFMLa8dd6ppgFAGiBQTeVwPqNwa4aSkdJA/edit?usp=sharing" 
+       target="_blank" rel="noopener noreferrer" 
+       class="text-[#00ff9c] font-mono text-xs border-b border-[#00ff9c] pb-1 hover:text-white hover:border-white transition-all inline-block">
+       GET_FREE_COURSE
+    </a>
+</div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <div class="p-6 bg-[#0d1117] border border-[#1f2933] hover:border-[#00ff9c]/50 transition-all group">
+            <h4 class="font-mono text-[#00ff9c] text-[12px] mb-2">01_EDA_WORKFLOW</h4>
+            <p class="text-sm text-white font-header uppercase tracking-wider mb-2">Schematic & Footprint</p>
+            <p class="text-sm text-[#9da7b3] leading-relaxed">Mastery of EasyEDA & KiCAD for custom symbol architecture and mechanical constraints.</p>
+        </div>
+
+        <div class="p-6 bg-[#0d1117] border border-[#1f2933] hover:border-[#00ff9c]/50 transition-all group">
+            <h4 class="font-mono text-[#00ff9c] text-[12px] mb-2">02_SYSTEM_ARCH</h4>
+            <p class="text-sm text-white font-header uppercase tracking-wider mb-2">Embedded Interfacing</p>
+            <p class="text-sm text-[#9da7b3] leading-relaxed">ESP32 integration, I2S audio, SPI communication, and complex power tree mapping.</p>
+        </div>
+
+        <div class="p-6 bg-[#0d1117] border border-[#1f2933] hover:border-[#00ff9c]/50 transition-all group">
+            <h4 class="font-mono text-[#00ff9c] text-[12px] mb-2">03_POWER_LOGIC</h4>
+            <p class="text-sm text-white font-header uppercase tracking-wider mb-2">Analog & Control</p>
+            <p class="text-sm text-[#9da7b3] leading-relaxed">MOSFET switching, relay integration, and motor control for industrial applications.</p>
+        </div>
+
+        <div class="p-6 bg-[#0d1117] border border-[#1f2933] hover:border-[#00ff9c]/50 transition-all group">
+            <h4 class="font-mono text-[#00ff9c] text-[12px] mb-2">04_PRODUCTION</h4>
+            <p class="text-sm text-white font-header uppercase tracking-wider mb-2">DFM & Logistics</p>
+            <p class="text-sm text-[#9da7b3] leading-relaxed">Reverse engineering, PCB panelization, and Gerber/BOM generation for JLCPCB.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="stickers" class="max-w-7xl mx-auto px-6 py-24 border-t border-[#1f2933]">
+    <div class="mb-16">
+        <p class="font-mono text-[#00ff9c] text-xs tracking-[0.5em] mb-4 uppercase">06. ENGINEER_GEAR</p>
+        <h2 class="font-header text-4xl md:text-4xl font-bold text-white">Get Engineer Stickers</h2>
+        <p class="mt-4 text-[#9da7b3] font-mono text-sm">Precision-cut Paper stickers for engineers. High-grade engineering aesthetics.</p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center">
+
+        <div class="sticker-wrapper group text-center">
+            <img src="https://i.ibb.co/xq4N3VZW/pcb.png" alt="PCB Sticker" class="sticker-img rotate-[-5deg] group-hover:rotate-0">
+            <span class="sticker-label font-mono">HARDWARE ENGINEER</span>
+        </div>
+
+        <div class="sticker-wrapper group text-center">
+            <img src="https://i.ibb.co/Dfyg8hX9/mech.png" alt="Mech Sticker" class="sticker-img rotate-[8deg] group-hover:rotate-0">
+            <span class="sticker-label font-mono">MECHANICAL ENGINEER</span>
+        </div>
+
+        <div class="sticker-wrapper group text-center">
+            <img src="https://i.ibb.co/JWfngCtq/ic.png" alt="IC Sticker" class="sticker-img rotate-[-3deg] group-hover:rotate-0">
+            <span class="sticker-label font-mono">IC DESIGN ENGINEER</span>
+        </div>
+
+        <div class="sticker-wrapper group text-center">
+            <img src="https://i.ibb.co/ks3Ts7Xn/soft.png" alt="Software Sticker" class="sticker-img rotate-[12deg] group-hover:rotate-0">
+            <span class="sticker-label font-mono">SOFTWARE ENGINEER</span>
+        </div>
+
+        <div class="sticker-wrapper group text-center">
+            <img src="https://i.ibb.co/Rk4vG5ZH/dsp.png" alt="DSP Sticker" class="sticker-img rotate-[-10deg] group-hover:rotate-0">
+            <span class="sticker-label font-mono">DSP ENGINEER</span>
+        </div>
+
+    </div>
+
+    <div class="mt-16">
+        <a href="#contact" class="inline-flex items-center gap-2 text-[#00ff9c] font-mono text-sm border border-[#00ff9c]/30 px-6 py-3 hover:bg-[#00ff9c]/10 transition-all">
+            <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+            ORDER_STICKER_PACK_v1.0
+        </a>
+    </div>
+</section>
+
+
+    <footer class="mt-20 border-t border-[#1f2933] bg-[#0d1117]/50 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+
+                <div>
+                    <h4 class="font-header text-[#00ff9c] mb-4 tracking-widest uppercase text-sm">System_Identity</h4>
+                    <p class="text-[#9da7b3] text-sm leading-relaxed mb-6">
+                        Specializing in high-speed PCB design, embedded firmware optimization, and EMI/EMC compliant
+                        hardware architecture.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.linkedin.com/in/muquit-arif/" target="_blank"
+                            class="p-2 border border-[#1f2933] hover:border-[#00ff9c] text-[#9da7b3] hover:text-[#00ff9c] transition">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://github.com/muquitarif" target="_blank"
+                            class="p-2 border border-[#1f2933] hover:border-[#00ff9c] text-[#9da7b3] hover:text-[#00ff9c] transition">
+                            <i data-lucide="github" class="w-5 h-5"></i>
+                        </a>
+                        <a href="mailto:muquitarif2@gmail.com"
+                            class="p-2 border border-[#1f2933] hover:border-[#00ff9c] text-[#9da7b3] hover:text-[#00ff9c] transition">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="w-2 h-2 rounded-full bg-[#00ff9c] animate-pulse"></span>
+                        <span class="font-header text-[#00ff9c] tracking-widest uppercase text-sm">SYSTEM_ONLINE</span>
+                    </div>
+                    <p class="mb-1 text-[#9da7b3] text-sm leading-relaxed">> Location: 2026.GLOBAL.NET</p>
+                    <p class="mb-1 text-[#9da7b3] text-sm leading-relaxed">> Status: Available for Collaboration</p>
+                    <p  class="mb-1 text-[#9da7b3] text-sm leading-relaxed"> > Latency: 24ms</p>
+                </div>
+
+                <div>
+                    <h4 class="font-header text-[#00ff9c] mb-4 tracking-widest uppercase text-sm">Data_Transmission</h4>
+                    <p class="text-xs text-[#9da7b3] mb-4 italic">Request technical documentation or consultation:</p>
+                    <a href="mailto:muquitarif2@gmail.com"
+                        class="block w-full py-3 px-4 border border-[#1f2933] text-center hover:border-[#00ff9c] hover:bg-[#00ff9c]/5 transition text-sm font-mono">
+                        SEND_ENCRYPTED_MESSAGE
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-[#1f2933] font-mono text-[10px] text-[#9da7b3]">
+                <p>© 2026 MUQUIT // ALL CORE REQUISITIONS RESERVED.</p>
+                <p class="mt-2 md:mt-0 uppercase tracking-widest">Built with Vanilla JS // Tailwind 4.0 // No Frameworks
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+</body>
+
+</html>

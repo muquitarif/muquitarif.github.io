@@ -1,0 +1,90 @@
+[
+  {
+    "id": "bluetooth-rgb-led",
+    "title": "Bluetooth RGB Addressable LED Controller",
+    "category": "IoT",
+    "shortDesc": "ESP32-C3 based addressable RGB LED controller with wireless connectivity.",
+    "fullDescription": "An ESP32-C3 based addressable RGB LED PCB featuring Bluetooth and WiFi connectivity, powered by a lithium-ion battery with integrated charging and protection circuitry.",
+    "thumbnail": "https://i.ibb.co/nMV0hYQY/rgbled.png",
+    "technologies": ["ESP32-C3", "Bluetooth", "WiFi", "Battery Charging", "PCB Design"],
+    "github": "#",
+    "gallery": ["https://i.ibb.co/nMV0hYQY/rgbled.png", "https://i.ibb.co/4gFHJDPF/rgbled-pcb.png"]
+  },
+  {
+    "id": "water-control-pcb",
+    "title": "Smart Aquarium Water Control PCB",
+    "category": "Embedded Systems",
+    "shortDesc": "Automated aquarium pump and water management controller.",
+    "fullDescription": "Custom PCB for a smart aquarium water management system featuring ESP32, L298N motor control, power regulation, status LEDs, buzzer alerts, and user buttons for pump and connectivity control.",
+    "thumbnail": "https://i.ibb.co/J9M86cH/pcb-design-1.png",
+    "technologies": ["ESP32", "Motor Control", "L298N", "Power Regulation", "IoT"],
+    "github": "#",
+    "gallery": ["https://i.ibb.co/qFFnjFz5/pcb-design.png", "https://i.ibb.co/J9M86cH/pcb-design-1.png"]
+  },
+  {
+    "id": "bluetooth-multiswitch",
+    "title": "Bluetooth-enabled Multiswitch Slim",
+    "category": "Smart Home",
+    "shortDesc": "ESP32-C3 based smart switch with multi-input support.",
+    "fullDescription": "Slim ESP32-C3 PCB interfacing with toggle switch and external push buttons, supporting wide 5V–24V input with onboard regulation.",
+    "thumbnail": "https://i.ibb.co/cBtLkrH/esp32c3-custom.jpg",
+    "technologies": ["ESP32-C3", "BLE", "Power Regulation", "Embedded Firmware"],
+    "github": "#",
+    "gallery": ["https://i.ibb.co/cBtLkrH/esp32c3-custom.jpg"]
+  },
+  {
+    "id": "necklace-tracker",
+    "title": "GNSS/GSM Necklace Tracker",
+    "category": "Tracking",
+    "shortDesc": "Compact wearable tracker with GNSS and GSM connectivity.",
+    "fullDescription": "Designed schematics, PCB layout, BOM, and pick-and-place files for a GNSS/GSM based wearable necklace tracker using Altium Designer.",
+    "thumbnail": "https://i.ibb.co/MyGR6CTY/image-psd-5.png",
+    "technologies": ["GNSS", "GSM", "Altium Designer", "Embedded Systems"],
+    "github": "#",
+    "gallery": ["https://i.ibb.co/MyGR6CTY/image-psd-5.png"]
+  },
+  {
+    "id": "rp2040-robot-shield",
+    "title": "Arduino Nano RP2040 Robot Shield",
+    "category": "Robotics",
+    "shortDesc": "Compact robot control shield with power and motor drivers.",
+    "fullDescription": "Custom shield for Arduino Nano RP2040 integrating MP2636 power booster, DRV8835 motor driver, and battery system for compact robotics applications.",
+    "thumbnail": "https://i.ibb.co/7dWW3H3m/sheild.png",
+    "technologies": ["RP2040", "Motor Drivers", "Robotics", "Power Electronics"],
+    "github": "#",
+    "gallery": ["https://i.ibb.co/7dWW3H3m/sheild.png"]
+  },
+  {
+    "id": "nrf-telemetry-hat",
+    "title": "NRF Telemetry HAT",
+    "category": "Industrial IoT",
+    "shortDesc": "Precision power monitoring and CAN-bus expansion for the nRF9151 SoC.",
+    "fullDescription": "A professional-grade expansion HAT designed specifically for the nRF9151 Development Kit. It features integrated CAN communication, high-precision power measurement circuitry, reliable power regulation, and an onboard SD card slot for local data logging, enabling comprehensive telemetry in remote monitoring applications.",
+    "thumbnail": "https://i.ibb.co/Y4dp4MJP/telemetry-hat.jpg",
+    "technologies": ["nRF9151", "CAN-Bus", "Power Monitoring", "Embedded C"],
+    "github": "#",
+    "gallery": ["https://i.ibb.co/Y4dp4MJP/telemetry-hat.jpg"]
+  },
+  {
+    "id": "stm32-f4-dev-board",
+    "title": "STM32F411CEU6 Development System",
+    "category": "Embedded Systems",
+    "shortDesc": "High-performance MCU breakout board optimized for signal integrity.",
+    "fullDescription": "Custom STM32 PCB Design featuring the STM32F411CEU6 (Black Pill architecture) MCU. The project involved rigorous schematic capture and multi-layer PCB layout design using Altium Designer, focusing on power decoupling and optimized trace routing.",
+    "thumbnail": "https://i.ibb.co/hJn0CgNZ/STM32-3D.jpg",
+    "technologies": ["STM32F411", "Altium Designer", "PCB Design", "ARM Cortex-M4"],
+    "github": "#",
+    "gallery": ["https://i.ibb.co/hJn0CgNZ/STM32-3D.jpg"]
+  },
+  {
+    "id": "usb-uart-converter",
+    "title": "USB to UART Converter",
+    "category": "Embedded Tools",
+    "shortDesc": "High-speed bridge with selectable voltage levels and LED diagnostics.",
+    "fullDescription": "A robust USB-to-Serial bridge PCB featuring a jumper-selectable 3.3V/5V power rail. The design includes dedicated RX, TX, and Power status LEDs, providing real-time visual feedback for serial communication and power delivery during firmware debugging.",
+    "thumbnail": "https://i.ibb.co/S49sfqhp/usb-uart-convertor2.jpg",
+    "technologies": ["UART", "Voltage Regulation", "PCB Design", "Diagnostic LEDs"],
+    "github": "#",
+    "gallery": ["https://i.ibb.co/S49sfqhp/usb-uart-convertor2.jpg"]
+  }
+]
