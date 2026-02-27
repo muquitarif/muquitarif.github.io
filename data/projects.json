@@ -38,10 +38,10 @@
     "category": "Tracking",
     "shortDesc": "Compact wearable tracker with GNSS and GSM connectivity.",
     "fullDescription": "Designed schematics, PCB layout, BOM, and pick-and-place files for a GNSS/GSM based wearable necklace tracker using Altium Designer.",
-    "thumbnail": "https://i.ibb.co/MyGR6CTY/image-psd-5.png",
+    "thumbnail": "https://i.ibb.co/C54bZfs4/tracker.jpg",
     "technologies": ["GNSS", "GSM", "Altium Designer", "Embedded Systems"],
     "github": "#",
-    "gallery": ["https://i.ibb.co/MyGR6CTY/image-psd-5.png"]
+    "gallery": ["https://i.ibb.co/C54bZfs4/tracker.jpg"]
   },
   {
     "id": "rp2040-robot-shield",
@@ -89,5 +89,6 @@
   }
 
 ]
+
 
 
