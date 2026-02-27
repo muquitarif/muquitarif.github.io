@@ -21,6 +21,31 @@
     "github": "#",
     "gallery": ["https://i.ibb.co/4nZK3Sng/Aquarium-Water-Control-PCB.jpg", "https://i.ibb.co/J9M86cH/pcb-design-1.png"]
   },
+
+{
+  "id": "peripheral-breakout-boards",
+  "title": "Peripheral & Interface Breakout Boards",
+  "category": "Hardware",
+  "shortDesc": "Collection of user interface, power, led matrix and indicator PCBs.",
+  "fullDescription": "A set of modular peripheral PCBs including a user interface board with rotary encoders and buttons, a battery holder power board with BMS, LED indicator boards, LED matrix module, front panel control board, and an ESP32-CAM module. These boards are designed to interface with a main controller, providing power distribution, signal routing, and user interaction functionality.",
+  "thumbnail": "https://i.ibb.co/B2dFL1xc/breakout-boards.jpg",
+  "technologies": [
+    "Cell Holder with BMS",
+    "LED Indicators",
+    "LED Matrix",
+    "ESP32-CAM Sheild",
+    "Rotary Encoder Board"
+  ],
+  "github": "#",
+  "gallery": [
+    "https://i.ibb.co/B2dFL1xc/breakout-boards.jpg",
+    "https://i.ibb.co/GLcPw2V/cell-holder-with-bms.jpg",
+    "https://i.ibb.co/jv3391td/led-board.jpg",
+    "https://i.ibb.co/9Sx8xCH/ledmatrix.jpg",
+    "https://i.ibb.co/p6zVd3D4/led-button-strip.jpg",
+    "https://i.ibb.co/8gGXmcvD/esp-cam.jpg"
+  ]
+},
   {
     "id": "bluetooth-multiswitch",
     "title": "Bluetooth-enabled Multiswitch Slim",
@@ -89,6 +114,7 @@
   }
 
 ]
+
 
 
 
