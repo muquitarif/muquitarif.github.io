@@ -5,7 +5,7 @@
     "category": "IoT",
     "shortDesc": "ESP32-C3 based addressable RGB LED controller with wireless connectivity.",
     "fullDescription": "An ESP32-C3 based addressable RGB LED PCB featuring Bluetooth and WiFi connectivity, powered by a lithium-ion battery with integrated charging and protection circuitry.",
-    "thumbnail": "https://i.ibb.co/nMV0hYQY/rgbled.png",
+    "thumbnail": "https://i.ibb.co/twk7Ttkx/rgbled-w.jpg",
     "technologies": ["ESP32-C3", "Bluetooth", "WiFi", "Battery Charging", "PCB Design"],
     "github": "#",
     "gallery": ["https://i.ibb.co/twk7Ttkx/rgbled-w.jpg", "https://i.ibb.co/4gFHJDPF/rgbled-pcb.png"]
@@ -89,3 +89,4 @@
   }
 
 ]
+
