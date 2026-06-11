@@ -21,6 +21,17 @@
     "github": "#",
     "gallery": ["https://i.ibb.co/4nZK3Sng/Aquarium-Water-Control-PCB.jpg", "https://i.ibb.co/J9M86cH/pcb-design-1.png"]
   },
+  {
+  "id": "iot-pcb-enclosure",
+  "title": "Custom IoT PCB Enclosure",
+  "category": "Embedded Hardware Design",
+  "shortDesc": "Compact enclosure designed for IoT PCB integration with accessible external interfaces.",
+  "fullDescription": "A purpose-built enclosure for custom IoT PCB assemblies, designed to provide clean and easy access to key external interfaces including USB ports, JST connectors for sensors, and communication modules. The enclosure ensures proper alignment, cable management, and mechanical protection while maintaining serviceability for prototyping and deployment. Optimized airflow and structured mounting points make it suitable for embedded systems, IoT nodes, and modular hardware kits.",
+  "thumbnail": "https://i.ibb.co/K1J2nWD/enclosure.jpg",
+  "technologies": ["3D Enclosure Design", "PCB Case Design"],
+  "github": "#",
+  "gallery": ["https://i.ibb.co/K1J2nWD/enclosure.jpg"]
+},
 {
   "id": "peripheral-breakout-boards",
   "title": "Peripheral & Interface Breakout Boards",
