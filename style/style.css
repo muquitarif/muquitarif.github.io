@@ -205,14 +205,11 @@ i[data-lucide], .lucide {
 }
 
 .youtube-preview {
-    position: relative;
     width: 100%;
-    max-width: 900px;
     aspect-ratio: 16 / 9;
+    position: relative;
     cursor: pointer;
     overflow: hidden;
-    border-radius: 12px;
-    background: #000;
 }
 
 .youtube-preview img {
