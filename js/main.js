@@ -252,6 +252,17 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     });
 });
 
-
-
 window.addEventListener('DOMContentLoaded', loadProjects);
+
+function loadVideo(el) {
+    el.innerHTML = `
+        <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/XuQi-hgh1_A?autoplay=1"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="position:absolute;top:0;left:0;width:100%;height:100%;">
+        </iframe>`;
+}
