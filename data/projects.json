@@ -87,7 +87,7 @@
     "thumbnail": "https://i.ibb.co/Y4dp4MJP/telemetry-hat.jpg",
     "technologies": ["nRF9151", "CAN-Bus", "Power Monitoring", "Embedded C"],
     "github": "#",
-    "gallery": ["https://i.ibb.co/Y4dp4MJP/telemetry-hat.jpg","https://i.ibb.co/60wkRRSQ/nrf-hat.jpg","https://i.ibb.co/mCt2PCcm/markup-17039.png"]
+    "gallery": ["https://i.ibb.co/Y4dp4MJP/telemetry-hat.jpg","https://i.ibb.co/DfjwfW6X/NRF-HAT.png","https://i.ibb.co/60wkRRSQ/nrf-hat.jpg","https://i.ibb.co/mCt2PCcm/markup-17039.png"]
   },
   {
     "id": "stm32-f4-dev-board",
