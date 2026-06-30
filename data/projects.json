@@ -68,6 +68,28 @@
     "gallery": ["https://i.ibb.co/cBtLkrH/esp32c3-custom.jpg"]
   },
   {
+  "id": "ntc-thermistors-plate",
+  "title": "NTC Thermistors Plate",
+  "category": "PCB Design",
+  "shortDesc": "A compact PCB designed for distributed NTC thermistor temperature sensing across a battery cell, enabling accurate thermal monitoring and hotspot detection.",
+  "fullDescription": "A dedicated PCB designed for battery temperature monitoring using an array of evenly distributed NTC thermistors. The layout provides uniform thermal coverage across the cell surface, allowing reliable detection of temperature gradients and localized hotspots. The ESP32 microcontroller is centrally positioned for efficient routing, while its antenna area is kept free from copper pours and nearby components to maintain optimal wireless performance. Ground copper pours are incorporated to provide low-impedance return paths, improving signal integrity and overall reliability. Four corner mounting holes ensure secure mechanical installation and minimize PCB flex during operation.",
+  "thumbnail": "https://i.ibb.co/xK40Vs2J/NTC-ARRAY.png",
+  "technologies": [
+    "PCB Design",
+    "ESP32",
+    "NTC Thermistors",
+    "Temperature Sensing",
+    "Wireless IoT",
+    "Altium Designer"
+  ],
+  "github": "#",
+  "gallery": [
+    "https://i.ibb.co/xK40Vs2J/NTC-ARRAY.png",
+    "https://i.ibb.co/b57r6wRy/ntc-array.jpg",
+    "https://i.ibb.co/VWPVx7Qg/ntc-array-2.jpg"
+  ]
+},
+  {
     "id": "rp2040-robot-shield",
     "title": "Arduino Nano RP2040 Robot Shield",
     "category": "Robotics",
