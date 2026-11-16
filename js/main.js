@@ -26,7 +26,7 @@ function initProjectSwiper() {
         spaceBetween: 24,
         grabCursor: true,
         loop: true,
-        
+
         autoplay: {
             delay: 3000,
             disableOnInteraction: false,
@@ -41,11 +41,11 @@ function initProjectSwiper() {
 
         // Pagination Config
         pagination: {
-            el: '.swiper-pagination',
+            el: '.project-swiper .swiper-pagination',
             clickable: true,
-            dynamicBullets: true, // Optional: Makes dots scale down if there are too many
+            dynamicBullets: true,
         },
-        
+
         breakpoints: {
             640: { slidesPerView: 2 },
             1024: { slidesPerView: 3 }
@@ -71,12 +71,12 @@ function renderProjects(projects) {
 
     grid.innerHTML = projects.map(project => {
         const projectLink = `project.html?id=${project.id}`;
-        
+
         return `
         <div class="swiper-slide h-auto">
-            <div onclick="window.location.href='${projectLink}'" 
+            <div onclick="window.location.href='${projectLink}'"
                  class="group relative bg-[#0d1117] border border-[#1f2933] hover:border-[#00ff9c]/50 rounded-sm overflow-hidden transition-all duration-300 flex flex-col h-full cursor-pointer">
-                
+
                 <div class="relative h-56 shrink-0 overflow-hidden">
                     <img src="${project.thumbnail}" alt="${project.title}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-500">
                     <div class="absolute top-4 left-4 bg-[#00ff9c] text-black text-[10px] font-bold px-3 py-1 uppercase tracking-wider z-10">
@@ -90,11 +90,11 @@ function renderProjects(projects) {
                             ${project.title}
                         </h4>
                     </a>
-                    
+
                     <p class="text-sm md:text-base text-[#9da7b3] leading-relaxed mb-auto pb-8 line-clamp-3">
                         ${project.shortDesc}
                     </p>
-                    
+
                     <div class="flex flex-wrap items-center justify-between gap-y-4 pt-6 border-t border-[#1f2933]/50">
     <div class="flex flex-wrap gap-2">
         ${project.technologies.slice(0, 3).map(tech => `
@@ -118,7 +118,7 @@ function renderProjects(projects) {
 function initSignalFlow() {
     const canvas = document.getElementById('signal-canvas');
     const ctx = canvas.getContext('2d');
-    
+
     let width, height;
     const spacing = 40; // Space between tracks
     const signals = [];
@@ -150,19 +150,19 @@ function initSignalFlow() {
             ctx.beginPath();
             ctx.lineWidth = 2;
             ctx.strokeStyle = '#00ff9c';
-            
+
             // Fade-in/out logic
             ctx.globalAlpha = this.opacity;
             if (this.opacity < 1) this.opacity += 0.02;
 
             ctx.moveTo(this.x, this.y);
-            
+
             // Draw signal "tail" based on direction
             if (this.direction === 0) ctx.lineTo(this.x - this.length, this.y);
             else if (this.direction === 1) ctx.lineTo(this.x, this.y - this.length);
             else if (this.direction === 2) ctx.lineTo(this.x + this.length, this.y);
             else if (this.direction === 3) ctx.lineTo(this.x, this.y + this.length);
-            
+
             ctx.stroke();
 
             // Movement logic
@@ -193,7 +193,7 @@ function initSignalFlow() {
         ctx.strokeStyle = '#1f2933';
         ctx.lineWidth = 0.5;
         ctx.globalAlpha = 0.3;
-        
+
         for (let x = 0; x < width; x += spacing) {
             ctx.moveTo(x, 0); ctx.lineTo(x, height);
         }
@@ -222,9 +222,9 @@ const mobileLinks = document.querySelectorAll('.mobile-link');
 function toggleMenu(open) {
     if (open) {
         mobileMenu.classList.remove('translate-x-full');
-        document.body.style.overflow = 'hidden'; 
+        document.body.style.overflow = 'hidden';
         // Force icons to render in the menu
-        lucide.createIcons(); 
+        lucide.createIcons();
     } else {
         mobileMenu.classList.add('translate-x-full');
         document.body.style.overflow = 'auto';
@@ -267,13 +267,23 @@ function loadVideo(el) {
         </iframe>`;
 }
 
+// Past PCB Orders Carousel
 document.addEventListener('DOMContentLoaded', () => {
-    new Swiper('.orders-swiper', {
+    const ordersEl = document.querySelector('.orders-swiper');
+    if (!ordersEl) return;
+
+    const ordersSwiper = new Swiper('.orders-swiper', {
         slidesPerView: 1,
         spaceBetween: 20,
         loop: true,
+        speed: 600,
         grabCursor: true,
-        autoplay: { delay: 3500, disableOnInteraction: false, pauseOnMouseEnter: true },
+        keyboard: { enabled: true },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false, // keeps autoplay after manual swipe/click
+            pauseOnMouseEnter: true      // pauses on hover, resumes on leave
+        },
         navigation: { prevEl: '.orders-prev', nextEl: '.orders-next' },
         pagination: { el: '.orders-pagination', clickable: true },
         breakpoints: {
@@ -281,4 +291,23 @@ document.addEventListener('DOMContentLoaded', () => {
             1024: { slidesPerView: 3 }
         }
     });
+
+    // Manual play/pause toggle
+    const toggleBtn = document.querySelector('.orders-toggle');
+    if (toggleBtn) {
+        let userPaused = false;
+        toggleBtn.addEventListener('click', () => {
+            if (userPaused) {
+                ordersSwiper.autoplay.start();
+                toggleBtn.textContent = 'PAUSE';
+            } else {
+                ordersSwiper.autoplay.stop();
+                toggleBtn.textContent = 'PLAY';
+            }
+            userPaused = !userPaused;
+        });
+    }
+
+    // Make sure the arrow icons render
+    if (typeof lucide !== 'undefined') lucide.createIcons();
 });
