@@ -48,7 +48,7 @@ function initProjectSwiper() {
 
         breakpoints: {
             640: { slidesPerView: 2 },
-            1024: { slidesPerView: 2 }
+            1024: { slidesPerView: 3 }
         }
     });
 }
@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
         pagination: { el: '.orders-pagination', clickable: true },
         breakpoints: {
             640:  { slidesPerView: 2 },
-            1024: { slidesPerView: 3 }
+            1024: { slidesPerView: 2 }
         }
     });
 
