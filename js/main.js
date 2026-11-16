@@ -266,3 +266,19 @@ function loadVideo(el) {
             style="position:absolute;top:0;left:0;width:100%;height:100%;">
         </iframe>`;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    new Swiper('.orders-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        grabCursor: true,
+        autoplay: { delay: 3500, disableOnInteraction: false, pauseOnMouseEnter: true },
+        navigation: { prevEl: '.orders-prev', nextEl: '.orders-next' },
+        pagination: { el: '.orders-pagination', clickable: true },
+        breakpoints: {
+            640:  { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
+        }
+    });
+});
