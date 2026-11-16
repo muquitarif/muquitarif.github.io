@@ -431,14 +431,16 @@
             </p>
         </div>
 
-        <div class="hidden md:flex gap-1">
-            <button class="orders-prev p-1.5 border border-[#1f2933] text-[#9da7b3] hover:text-[#00ff9c] hover:border-[#00ff9c] transition-all bg-[#0d1117] cursor-pointer" aria-label="Previous">
-                <i data-lucide="chevron-left" class="w-4 h-4"></i>
-            </button>
-            <button class="orders-next p-1.5 border border-[#1f2933] text-[#9da7b3] hover:text-[#00ff9c] hover:border-[#00ff9c] transition-all bg-[#0d1117] cursor-pointer" aria-label="Next">
-                <i data-lucide="chevron-right" class="w-4 h-4"></i>
-            </button>
-        </div>
+      <div class="flex items-center gap-1">
+    <button class="orders-toggle px-3 py-1.5 border border-[#1f2933] text-[#9da7b3] hover:text-[#00ff9c] hover:border-[#00ff9c] transition-all bg-[#0d1117] cursor-pointer font-mono text-[11px] tracking-widest"
+            aria-label="Toggle autoplay">PAUSE</button>
+    <button class="orders-prev p-1.5 border border-[#1f2933] text-[#9da7b3] hover:text-[#00ff9c] hover:border-[#00ff9c] transition-all bg-[#0d1117] cursor-pointer" aria-label="Previous">
+        <i data-lucide="chevron-left" class="w-4 h-4"></i>
+    </button>
+    <button class="orders-next p-1.5 border border-[#1f2933] text-[#9da7b3] hover:text-[#00ff9c] hover:border-[#00ff9c] transition-all bg-[#0d1117] cursor-pointer" aria-label="Next">
+        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+    </button>
+</div>
     </div>
 
     <div class="swiper orders-swiper pb-12">
